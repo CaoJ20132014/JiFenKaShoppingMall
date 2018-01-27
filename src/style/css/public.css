@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* home页底部bar的文字选中时的颜色 */
+.van-tabbar-item--active{
+    color: #a062df;
+}
+/* 头部字体颜色 */
+.van-nav-bar .van-icon,
+.van-nav-bar__text{
+    color: #a062df;
+}
