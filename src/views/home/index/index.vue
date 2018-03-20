@@ -8,7 +8,7 @@
                     <img :src="props.active ? icon1.active : icon1.normal" />
                 </template>
             </van-tabbar-item>
-            <van-tabbar-item icon="chat" info='99'>
+            <van-tabbar-item icon="chat" :info='count'>
                 <span>购物车</span>
                 <template slot="icon" slot-scope="props">
                     <img :src="props.active ? icon2.active : icon2.normal" />
@@ -45,8 +45,24 @@
                 icon3: {
                     normal: e,
                     active: f
+                },
+                count: "99+"
+            }
+        },
+        watch: {
+            $route() {
+                this.changeActive();
+            },
+            active(){
+                if (this.active == 1) {
+                    this.count = "";
+                } else {
+                    this.count = "99" + "+";
                 }
             }
+        },
+        mounted () {
+            this.changeActive();
         },
         methods: {
             barChange(active){
@@ -63,12 +79,31 @@
                         name: 'user'
                     });
                 } 
+            },
+            changeActive(){
+                switch (this.$route.path) {
+                    case "/home/":
+                        this.active = 0;
+                        break;
+                    case "/home/shopCar":
+                        this.active = 1;
+                        break;
+                    case "/home/user":
+                        this.active = 2;
+                        break;
+                    default:
+                        break;
+                }
             }
         }
     }
 </script>
 <style lang="less" scoped>
+    @import '../../../style/less/public/var.less';
     #home{
-        margin-top: 46px;
+        // margin-top: 46px;
+        .van-tabbar-item--active{
+            color: @color-common1;
+        }
     }
 </style>

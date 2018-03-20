@@ -5,7 +5,9 @@ import Vant from 'vant';
 import 'vant/lib/vant-css/index.css';
 import 'lib-flexible';
 import './style/css/public.css';
+import { Waterfall } from 'vant';
 
+Vue.use(Waterfall);
 Vue.use(Vant);
 Vue.config.productionTip = false;
 

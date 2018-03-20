@@ -1,0 +1,162 @@
+@import "../public/var.less";
+#Game{
+	width: 10rem;
+	height: 15.626667rem;
+	background-image: url("../../../assets/image/game/choujiang.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	position: relative;
+	.prize_content{
+		.luckDraw{
+			width: 7.466667rem;
+			height: 7.466667rem;
+			margin: 0 auto 1.0rem;
+			padding-top: 4.466667rem;
+		}
+		.flex_box{
+			display: flex;
+			justify-content: center;
+			.yellow{
+				width: 2.6rem;
+				height: 0.8rem;
+				background-color: gold;
+				text-align: center;
+				line-height: 0.8rem;
+				color: red;
+				font-weight: 800;
+				font-size: 0.426667rem;
+				&:nth-child(2){
+					margin-left: .853333rem;
+				}
+			}
+		}
+		.luckDraw{
+			.luck_table{
+				margin: 0 auto 0;
+				tr {
+					.active{
+						.mask_red{
+							display: block;
+						}
+					}
+					td {
+						.bg_box{
+							position: relative;
+							width: 1.44rem;
+							height: 1.466667rem;
+							background-image: url("../../../assets/image/game/timg.png");
+							background-size: 100% 100%;
+							background-repeat: no-repeat;
+							text-align: center;
+							font-size: 0.32rem;
+							color: red;
+							font-weight: 700;
+							p{
+								padding-top: 0.293333rem;
+							}
+						}
+						.bg_thank{
+							width: 1.44rem;
+							height: 1.466667rem;
+							background-image: url("../../../assets/image/game/thank.png");
+							background-size: 100% 100%;
+							background-repeat: no-repeat;
+							text-align: center;
+							font-size: 0.24rem;
+							color: red;
+							font-weight: 900;
+							p{
+								padding-top: 0.933333rem;
+							}
+						}
+					}
+					.lattice_box{
+						width: 4.506667rem;
+						height: 3.956667rem;
+						background-image: url("../../../assets/image/game/lattice_bg.png");
+						background-size: 100% 100%;
+						background-repeat: no-repeat;
+						padding-top: 0.496667rem;
+						.start_box{
+							width: 3.4rem;
+							height: 3.4rem;
+							border: 0.026667rem solid #ffff00;
+							margin: auto;
+							overflow: hidden;
+							position: relative;
+							.start_btn{
+								width: 2.826667rem;
+								height: 2.826667rem;
+								background-image: url("../../../assets/image/game/start.png");
+								background-size: 100% 100%;
+								background-repeat: no-repeat;
+								position: absolute;
+								top: 0;
+								left: 0;
+								bottom: 0;
+								right: 0;
+								margin:auto;
+							}
+							#demo {
+								background: #FFF;
+								overflow: hidden;
+								width: 4.8rem;
+								height: 4.8rem;
+								-webkit-transform: rotate(-135deg);
+										transform: rotate(-135deg);
+								position: absolute;
+								left: -.7rem;
+								top: -.7rem;
+								#indemo {
+									float: left;
+									width: 800%;
+									height: 100%;
+									#demo1 {
+										height: 100%;
+										float: left;
+										font-size: 0;
+										zoom: 1;
+										img{
+											width: 4.8rem;
+											height: 100%;
+										}
+										&:before,&:after{
+											content: "";
+											display: block;
+											clear: both;
+										}
+									}
+									#demo2 {
+										height: 100%;
+										float: left;
+										zoom: 1;
+										img{
+											width: 4.8rem;
+											height: 100%;
+										}
+										&:before,&:after{
+											content: "";
+											display: block;
+											clear: both;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				.mask_red {
+					width: 1.14rem;
+					height: 1.166667rem;
+					display: none;
+					position: absolute;
+					left: 0;
+					top: 0;
+					border: .15rem solid red;
+					border-radius: 0.2rem;
+					background-color: rgba(240,255,250,.4);
+				}
+			}
+		}
+	}
+}

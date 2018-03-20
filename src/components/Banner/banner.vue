@@ -22,10 +22,10 @@
 <style lang="less" scoped>
     .van-swipe{
         width: 10rem;
-        height: 4rem;
+        height: 4.666667rem;
         img{
             width: 100%;
-            height: 4rem;
+            height: 4.666667rem;
         }
     }
 </style>

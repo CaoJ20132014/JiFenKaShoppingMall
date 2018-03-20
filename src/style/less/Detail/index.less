@@ -1,0 +1,115 @@
+@import "../public/var.less";
+#Details{
+    background-color: @background-color;
+    margin-top: @base-margin*9.2;
+    padding-bottom: @base-padding*11;
+    font-size: 0;
+    // 商品信息
+    .goodsInfo{
+        background-color: white;
+        width: 9.466667rem;
+        height: 3.413333rem;
+        padding: 0 @base-padding*2;
+        margin-top: @base-margin;
+        .info-top{
+            font-size: .373333rem;
+            padding: @base-padding*3 0 @base-padding*3 0;
+            p{
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                overflow: hidden;
+            }
+        }
+        .info-con{
+            border-bottom: .013333rem solid #dddddd;
+            padding-bottom: @base-padding;
+            p{
+                span{
+                    font-size: .32rem;
+                    color: @color-common3;
+                }
+                .big{
+                    font-size: .586667rem;
+                }
+                .grey{
+                    color: #898989;
+                    padding-left: @base-padding*2;
+                }
+            }
+        }
+        .info-bot{
+            height: .746667rem;
+            p{
+                height: .746667rem;
+                line-height: .746667rem;
+                span{
+                    font-size: .32rem;
+                    color: #898989;
+                }
+            }
+        }
+    }
+    // 选择商品
+    .choose{
+        width: 9.466667rem;
+        padding: 0 @base-padding*2;
+        margin-top: @base-margin;
+        height: 1.013333rem;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        .choose-left{
+            height: 1.013333rem;
+            p{
+                height: 1.013333rem;
+                line-height: 1.013333rem;
+                font-size: .32rem;
+            }
+        }
+        .choose-right{
+            img{
+                margin-top: .373333rem;
+                width: .16rem;
+                height: .266667rem;
+            }
+        }
+    }
+    // 商品详情-顶部
+    .detail-heard{
+        width: 9.466667rem;
+        height: .346667rem;
+        padding: @base-padding*3.7 @base-padding*2;
+        img{
+            width: 9.6rem;
+            height: .346667rem;
+        }
+    }
+    // 商品详情展示区
+    .detail-show-area{
+        img{
+            width: 10rem;
+        }
+    }
+    // 底部的操作按钮
+    .bot-operate{
+        height: 1.2rem;
+        position: fixed;
+        bottom: 0;
+        .van-goods-action{
+            height: 1.2rem;
+            .van-button--bottom-action{
+                line-height: 1.2rem;
+                height: 1.2rem;
+                background-color: #a062e0;
+                font-size: .373333rem;
+            }
+            .van-button--bottom-action.van-button--primary{
+                background-color: #864fd1;
+            }
+            .van-goods-action__mini-btn.van-hairline{
+                vertical-align: top;
+            }
+        }
+    }
+}

@@ -1,0 +1,217 @@
+@import "../../public/var.less";
+#User{
+    background-color: @background-color;
+    margin-bottom: @base-margin*10;
+    padding-bottom: @base-padding*2;
+    font-size: 0;
+    // 标题
+    .title{
+        width: 10rem;
+        height: .986667rem;
+        background: linear-gradient(to right, #6852bc, #934dda);
+        text-align: center;
+        color: white;
+        font-size: .48rem;
+        line-height: .986667rem;
+        border-bottom: .013333rem solid white;
+    }
+    // 用户名、头像
+    .userName{
+        width: 9.466667rem;
+        height: 4.573333rem;
+        padding-left: .266667rem;
+        padding-right: .266667rem; 
+        background: linear-gradient(to right, #6852bc, #934dda);
+        .userName-top{
+            display: flex;
+            height: 2.893333rem;
+            line-height: 2.893333rem;
+            .top-left{
+                width: 1.6rem;
+                height: 1.6rem;
+                border-radius: 50%;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    margin-top: .613333rem;
+                }
+            }
+            .top-right{
+                margin-left: .56rem;
+                font-size: .4rem;
+                color: white;
+            }
+        }
+        .userName-bot{
+            width: 100%;
+            height: 1.666667rem;
+            p{
+                &:first-child{
+                    color: #e9d7fe;
+                    font-size: .32rem;
+                }
+                &:last-child{
+                    font-size: .8rem;
+                    color: white;
+                }
+            }
+        }
+    }
+    // 消费金、返利金、可兑换、可提现
+    .fourMoney{
+        width: 9.466667rem;
+        height: 1.493333rem;
+        padding-left: .266667rem;
+        padding-right: .266667rem; 
+        background-color: #6f4bc0;
+        .fourMoney-ul{
+            width: 9.466667rem;
+            display: flex;
+            .ul-li{
+                font-size: .32rem;
+                color: #e9d7fe;
+                text-align: center;
+                &:nth-child(1){
+                    width: 20%;
+                }
+                &:nth-child(2){
+                    width: 30%;
+                }
+                &:nth-child(3){
+                    width: 30%;
+                }
+                &:nth-child(4){
+                    width: 20%;
+                }
+                p{
+                    &:first-child{
+                        line-height: .85rem;
+                    }
+                    &:last-child{
+                        font-size: .373333rem;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+    // 订单
+    .myOrder{
+        width: 10rem;
+        margin-bottom: @base-margin*2;
+        .myOrder-top{
+            .van-cell-group.van-hairline--top-bottom{
+                .van-cell.van-hairline.van-cell--clickable{
+                    padding-left: .266667rem;
+                    padding-right: .133333rem;
+                    padding-top: .223333rem;
+                    padding-bottom: .223333rem;
+                }
+            }
+        }
+        .myOrder-bot{
+            width: 9.466667rem;
+            height: 1.733333rem;
+            padding-left: .266667rem;
+            padding-right: .266667rem; 
+            background-color: white;
+            .myOrder-bot-ul{
+                display: flex;
+                .ul-li{
+                    text-align: center;
+                    &:nth-child(1){
+                        width: 20%;
+                        img{
+                            width: .666667rem;
+                        }
+                    }
+                    &:nth-child(2){
+                        width: 30%;
+                        img{
+                            width: .76rem;
+                        }
+                    }
+                    &:nth-child(3){
+                        width: 30%;
+                        img{
+                            width: .613333rem;
+                        }
+                    }
+                    &:nth-child(4){
+                        width: 20%;
+                        img{
+                            width: .666667rem;
+                        }
+                    }
+                    img{
+                        margin-top: .266667rem;
+                        margin-bottom: .2rem;
+                    }
+                    p{
+                        font-size: .32rem;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+    // 邀请好友、收货地址、成为经营者、集分卡兑换币、常见问题、联系客服
+    .domain{
+        .van-cell-group.van-hairline--top-bottom{
+            .van-cell.van-hairline.van-cell--clickable{
+                padding-left: .266667rem;
+                padding-right: .133333rem;
+                padding-top: .223333rem;
+                padding-bottom: .223333rem;
+                &:nth-child(1){
+                    img{
+                        width: .426667rem;
+                        margin-top: .063333rem;
+                        margin-right: .166667rem;
+                    }
+                }
+                &:nth-child(2){
+                    img{
+                        width: .533333rem;
+                        margin-top: .063333rem;
+                        margin-right: .066667rem;
+                    }
+                }
+                &:nth-child(3){
+                    img{
+                        width: .426667rem;
+                        margin-top: .093333rem;
+                        margin-right: .166667rem;
+                    }
+                }
+                &:nth-child(4){
+                    img{
+                        width: .426667rem;
+                        margin-top: .063333rem;
+                        margin-right: .166667rem;
+                    }
+                }
+                &:nth-child(5){
+                    img{
+                        width: .426667rem;
+                        margin-top: .083333rem;
+                        margin-right: .166667rem;
+                    }
+                }
+                &:nth-child(6){
+                    img{
+                        width: .426667rem;
+                        margin-top: .083333rem;
+                        margin-right: .166667rem;
+                    }
+                }
+                .van-cell__title{
+                    span{
+                        vertical-align: top;
+                        font-size: .32rem;
+                    }
+                }
+            }
+        }
+    }
+}

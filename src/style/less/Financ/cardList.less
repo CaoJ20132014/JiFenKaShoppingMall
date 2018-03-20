@@ -1,0 +1,68 @@
+@import "../public/var.less";
+#CardList{
+    margin-top: @base-margin*10.5;
+    font-size: 0;
+    background-color: white;
+    .list{
+        width: 100%;
+        .label{
+            width: 9.466667rem;
+            padding: 0 @base-padding*2;
+            height: 1.6rem;
+            display: flex;
+            border-bottom: .013333rem solid #f4f4f4;
+            .label-left{
+                img{
+                    width: 1.066667rem;
+                    height: 1.066667rem;
+                    margin-top: .266667rem;
+                }
+            }
+            .label-con{
+                width: 7.973333rem;
+                padding-left: @base-padding*2;
+                font-size: .373333rem;
+                padding-top: .326667rem;
+                p{
+                    &:last-child{
+                        padding-top: .133333rem;
+                        font-size: .32rem;
+                        color: #858688;
+                    }
+                }
+            }
+            .label-right{
+                input[type="radio"]{
+                    width: .42rem;
+                    height: .42rem;
+                    cursor: pointer;
+                    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+                    filter: alpha(opacity=0);
+                    background-color: white;
+                    margin-top: .526667rem;
+                }
+                .radio{
+                    display: none;
+                }
+                .radioInput{
+                    background-color: #fff;
+                    border: 1px solid rgba(0,0,0,0.15);
+                    border-radius: 50%;
+                    display: block;
+                    height: .42rem;
+                    width: .42rem;
+                    margin-top: .526667rem;
+                }
+                .radio:checked + .radioInput:after{
+                    width: .32rem;
+                    height: .32rem;
+                    border-radius: 50%;
+                    content: "";
+                    background-color: #934dda;
+                    display: block;
+                    margin: 0.05rem;
+                }
+            }
+        }
+    }
+}

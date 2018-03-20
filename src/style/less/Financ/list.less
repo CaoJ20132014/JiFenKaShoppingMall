@@ -1,0 +1,55 @@
+@import "../public/var.less";
+#list{
+    background-color: @background-color;
+    margin-top: @base-margin*9.2;
+    font-size: 0;
+    .operate{
+        width: 10rem;
+        height: 1.093333rem;
+        .operate-ul{
+            width: 100%;
+            display: flex;
+            background-color: white;
+            li{
+                font-size: .373333rem;
+                width: 33.3333333%;
+                line-height: 1.04rem;
+                text-align: center;
+            }
+            .active{
+                border-bottom: .053333rem solid #a062e0;
+                color: #a062e0;
+            }
+        }
+    }
+    .List{
+        background-color: white;
+        margin-top: .133333rem;
+        .List-ul{
+            li{
+                padding: 0 .266667rem;
+                border-bottom: .013333rem solid #ebebeb;
+                height: 1.72rem;
+                p{
+                    display: flex;
+                    justify-content: space-between;
+                    .green{
+                        color: #8ec31e;
+                    }
+                    .yellow{
+                        color: #f89a2c;
+                    }
+                }
+                .top{
+                    font-size: .373333rem;
+                    padding-top: .423333rem;
+                }
+                .bot{
+                    font-size: .32rem;
+                    padding-top: .2rem;
+                    color: #888888;
+                }
+            }
+        }
+    }
+}
