@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import { Toast } from 'vant';
+import Public from '../until/public/until';
 
 Vue.use(Router);
 
@@ -98,6 +99,9 @@ const router = new Router({
 });
 
 router.beforeEach((to, from, next) => {
+	if (from.fullPath == "/exit") {
+		Public.JS_Cookie("remove","address");
+	}
 	if (to.fullPath == '/') {
 		next();
 	} else {

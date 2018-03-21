@@ -4,7 +4,7 @@ import router from './router';
 import Vant from 'vant';
 import 'vant/lib/vant-css/index.css';
 import 'lib-flexible';
-import './style/css/public.css';
+import './style/css/public/public.css';
 import { Waterfall } from 'vant';
 
 Vue.use(Waterfall);

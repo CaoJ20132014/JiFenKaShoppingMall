@@ -1,0 +1,9 @@
+:root{ 
+    --base-color1: #a062df;
+    --base-color2: #934dda;
+    --base-color3: #898989;       /* 字体颜色 */
+    --base-color4: #f4f4f4;       /* 背景颜色 */
+    --base-padding: .133333rem;     /* 10px */
+    --base-margin: .133333rem;      /* 10px */
+    --base-font: .133333rem;        /* 10px */
+}

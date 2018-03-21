@@ -1,31 +1,14 @@
-html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,input,button,textarea,menu{margin:0;padding:0;}
-header,footer,section,article,aside,nav,hgroup,address,figure,figcaption,menu,details{display:block;}
-table{border-collapse:collapse;border-spacing:0;}
-caption,th{text-align:left;font-weight:normal;}
-html,body,fieldset,img,iframe,abbr,button,input{border:0;}
-i,cite,em,var,address,dfn{font-style:normal;}
-[hidefocus],summary{outline:0;}
-li{list-style:none;}
-h1,h2,h3,h4,h5,h6,small{font-size:100%;}
-sup,sub{font-size:83%;}
-pre,code,kbd,samp{font-family:inherit;}
-q:before,q:after{content:none;}
-textarea{overflow:auto;resize:none;}
-label,summary{cursor:default;}
-a,button{cursor:pointer;}
-h1,h2,h3,h4,h5,h6,em,strong,b{font-weight:bold;}
-del,ins,u,s,a,a:hover{text-decoration:none;}
-body,textarea,input,button,select,keygen,legend{color:black;outline:0;}
-body{background:#f4f4f4;}
-a,a:hover{color:#333;}
+@import "../var/var.css";
+@import "../reset/reset.css";
+
 /* home页底部bar的文字选中时的颜色 */
 .van-tabbar-item--active{
-    color: #a062df;
+    color: var(--base-color1);
 }
 /* 头部字体颜色 */
 .van-nav-bar .van-icon,
 .van-nav-bar__text{
-    color: #a062df;
+    color: var(--base-color1);
 }
 ::-webkit-scrollbar{
     display: none;
@@ -46,7 +29,7 @@ a,a:hover{color:#333;}
 #User .myOrder .van-cell__value.van-cell__value--link{
     padding-right: .566667rem;
     font-size: .32rem;
-    color: #898989;
+    color: var(--base-color3);
 }
 #User .domain .van-icon.van-cell__right-icon.van-icon-arrow{
     right: .183333rem;
@@ -54,21 +37,15 @@ a,a:hover{color:#333;}
 #User .domain .van-cell__value.van-cell__value--link{
     padding-right: .566667rem;
     font-size: .32rem;
-    color: #898989;
+    color: var(--base-color3);
 }
 /* 购物车 */
 #heard .van-nav-bar.van-hairline--top-bottom.van-nav-bar--fixed{
     background: linear-gradient(to right, #6852bc, #934dda);
 }
-#heard .van-nav-bar__title{
-    color: white;
-}
-#heard .van-nav-bar__left .van-nav-bar__text{
-    color: white;
-}
-#heard .van-icon.van-nav-bar__arrow.van-icon-arrow{
-    color: white;
-}
+#heard .van-nav-bar__title,
+#heard .van-nav-bar__left .van-nav-bar__text,
+#heard .van-icon.van-nav-bar__arrow.van-icon-arrow,
 #heard .van-nav-bar .van-icon{
     color: white;
 }
@@ -91,24 +68,24 @@ a,a:hover{color:#333;}
 }
 #ShopCar .van-submit-bar .van-submit-bar__bar .van-button.van-button--danger.van-button--normal{
     width: 2.666667rem;
-    background-color: #a062e0;
-    border: 1px solid #a062e0;
+    background-color: var(--base-color1);
+    border: 1px solid var(--base-color1);
 }
 #ShopCar .van-submit-bar .van-submit-bar__price{
     text-align: center;
     height: .746667rem;
     line-height: .746667rem;
-    border-left: .026667rem solid #f4f4f4;
+    border-left: .026667rem solid var(--base-color4);
     margin-left: .566667rem;
     margin-top: .226667rem;
 }
 .van-checkbox__control:checked+.van-icon-success{
-    border-color: #a062e0;
-    background-color: #a062e0;
+    border-color: var(--base-color1);
+    background-color: var(--base-color1);
 }
 #ShopCar .van-checkbox__label{
     font-size: .373333rem;
-    color: #a062e0;
+    color: var(--base-color1);
 }
 /* 首页底部购物车按钮红点定位 */
 .van-icon__info{
@@ -125,15 +102,15 @@ a,a:hover{color:#333;}
 }
 /* 地址列表页面 */
 .van-radio .van-icon-checked{
-    color: #a062e0;
+    color: var(--base-color1);
 }
 /* 地址编辑页面 */
 #Exit .van-button.van-button--primary.van-button--normal.van-button--block{
     background: linear-gradient(to right, #6852bc, #934dda);
-    border-color: #934dda;
+    border-color: var(--base-color1);
 }
 .van-switch--on{
-    background-color: #934dda;
+    background-color: var(--base-color2);
 }
 #Exit .van-switch-cell .van-cell__value{
     height: 33px;
@@ -153,7 +130,7 @@ a,a:hover{color:#333;}
 }
 .van-picker__confirm,
 .van-picker__cancel{
-    color: #934dda;
+    color: var(--base-color2);
 }
 /* 集分理财 */
 #Financ .unit .van-icon.van-cell__right-icon.van-icon-arrow{

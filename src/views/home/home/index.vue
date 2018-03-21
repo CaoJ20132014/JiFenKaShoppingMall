@@ -227,13 +227,12 @@
             },
             loadMore() {
                 if (this.page <= 3) {
-                    console.log(this.page);
                     this.page++;
                     this.disabled = true;
                     Toast.loading({
                         mask: true,
                         message: '加载中...',
-                        duration: 1000,
+                        duration: 500,
                         mask: false,
                         forbidClick: false
                     });
@@ -244,13 +243,13 @@
                         newPrice: 100,
                         oldPrice: 200,
                         isHot: true,
-                        isSelect: true
+                        isSelect: false
                     }
                     setTimeout(() => {
                         this.goodsList.push(obj);
                         this.goodsList.push(obj);
                         this.disabled = false;
-                    }, 1000);
+                    }, 500);
                 } else {
                     this.disabled = false;
                     this.noData = true;
