@@ -1,15 +1,14 @@
 <template>
   	<div id="login-box">
 		<van-cell-group>
-  			<van-field v-model="username" label="用户名：" icon="clear" placeholder="请输入用户名" required @click-icon="username = ''"/>
+  			<van-field v-model="username" :maxLength="13" label="用户名：" icon="close" placeholder="请输入用户名" required @click-icon="username = ''" @keypress.native="ValChange(username)"/>
 			<van-field v-model="password" :type="inputType" label="密码：" :icon='icon' placeholder="请输入密码" required @click-icon="[icon == 'password-not-view' ? icon = 'password-view' : icon = 'password-not-view'],[icon == 'password-not-view' ? inputType = 'password' : inputType = 'text']"/>
-			<van-field class="VerificationCode" v-model="username" label="验证码：" icon="clear" placeholder="请输入短信验证码" required @click-icon="username = ''"/>
+			<van-field class="VerificationCode" v-model="username" label="验证码：" icon="close" placeholder="请输入短信验证码" required @click-icon="username = ''"/>
 			<van-button class="getCode" size="normal" :disabled="disabled" @click="getcode" v-text="btnText"></van-button>
 		</van-cell-group>
 		<van-button class="login" size="large" @click="Login">登录</van-button>
 	</div>
 </template>
-
 <script>
 	export default {
 		data() {
@@ -24,6 +23,11 @@
 			};
 		},
 		methods:{
+			ValChange(username) {
+				if(username.length == '13') {
+					console.log(this.username);
+				}
+			},
 			getcode(){
 				if (true) {
 					this.time = 60;

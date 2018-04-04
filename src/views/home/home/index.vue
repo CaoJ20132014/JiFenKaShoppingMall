@@ -5,7 +5,7 @@
         <!-- 搜索框，消息，扫一扫 -->
         <div class="search-news">
             <van-search placeholder="请输入商品名称" v-model="value" />
-            <img class="saosao" src="../../../assets/image/index/saosao.png" alt="">
+            <img class="saosao" src="../../../assets/image/index/saosao.png" alt="" @click="saosao">
             <div class="news">
                 <img class="newsImg" src="../../../assets/image/index/news.png" alt="">
                 <p v-show="hasNews"></p>
@@ -106,6 +106,7 @@
     import k from '@/assets/image/index/luyouqi.png';
     import Banner from '@/components/Banner/banner.vue';
     import { Toast } from 'vant';
+    const WX = require('weixin-js-sdk');			// 引入微信 weixin-js-sdk
     export default {
         components: {
             Banner
@@ -203,7 +204,33 @@
                 }]
             }
         },
+        mounted() {
+            console.log(WX);
+            WX.config({
+                debug: false,
+                appId: "{$signPackage['appId']}",
+                timestamp: "{$signPackage['timestamp']}",
+                nonceStr: "{$signPackage['nonceStr']}",
+                signature: "{$signPackage['signature']}",
+                jsApiList: [
+                    'onMenuShareTimeline',
+                    'onMenuShareAppMessage',
+                    "onMenuShareQQ",
+                    "onMenuShareQZone",
+                    'scanQRCode'
+                ]
+	        });
+        },
         methods: {
+            saosao() {
+                WX.scanQRCode({
+                    needResult: 0,                      // 默认为0，扫描结果由微信处理，1则直接返回扫描结果
+                    scanType: ["qrCode", "barCode"],    // 可以指定扫二维码还是一维码，默认二者都有
+                    success: function(res) {
+                        var result = res.resultStr;     // 当needResult 为 1 时，扫码返回的结果
+                    }
+                });
+            },
             onClickLeft() {
                 console.log('返回');
             },
@@ -211,7 +238,6 @@
                 console.log('按钮');
             },
             Jump(route) {
-                console.log(route);
                 this.$router.push({
                     name: route
                 });

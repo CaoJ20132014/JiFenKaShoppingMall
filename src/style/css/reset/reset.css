@@ -1,6 +1,6 @@
 html{font-family:"Helvetica Neue", Helvetica, STHeiTi, sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
 html,body{-webkit-user-select:none;user-select:none;background-color:#f4f4f4;}
-html,body,div,object,iframe,applet,object,h1,h2,h3,h4,h5,h6,p,blockquote,pre,address,dl,dt,dd,ol,ul,li,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;vertical-align:baseline;}
+html,body,div,object,iframe,applet,object,h1,h2,h3,h4,h5,h6,p,blockquote,pre,address,dl,dt,dd,ol,ul,li,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,menu,nav,intput,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;vertical-align:baseline;}
 a{text-decoration:none;-webkit-touch-callout:none;background-color:transparent;}
 li{list-style:none;}
 article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block;}
@@ -41,3 +41,5 @@ optgroup{font-weight:bold;}
 table{border-collapse:collapse;border-spacing:0;}
 td,th{padding:0;}
 a,a:hover, a:visited, a:link, a:active {color: white;}
+input:not([type]), input[type="email"], input[type="number"], input[type="password"], input[type="tel"], input[type="url"], input[type="text"],input[type="button"],input[type="submit"],
+input[type="reset"],input[type="file"]::-webkit-file-upload-button,button{padding: 0;}
